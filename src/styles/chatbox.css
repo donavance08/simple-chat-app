@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Rubik+Vinyl&display=swap');
+
+.chat-header{
+
+    font-family: 'Rubik Vinyl', cursive !important;
+    color: white;
+}
+
+.chat-history{
+    height: 80%;
+}
+
+.row{
+    height: 100%;
+}

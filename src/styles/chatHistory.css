@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&family=Roboto:wght@700&family=Rubik+Vinyl&display=swap');
+
+p{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    color: white;
+    margin: auto;
+}
+
+.line-container{
+    display:inline-flex;
+    align-items: center;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    background-color: black;
+    margin-bottom: 1rem;
+    padding: 0px 1rem;
+
+}
+
+.sent{
+    display: flex;
+    justify-content: end;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+.recieved{
+    display: flex;
+    justify-content: start;
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+.message-container{
+    margin: 1rem 3rem;
+}
