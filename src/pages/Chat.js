@@ -24,19 +24,21 @@ export default function Chat(){
     }, []);
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/users/getAllUsers/${JSON.parse(localStorage.getItem("user"))._id}`, {
-            headers:{
-                "Content-type": "application/json"
-            }
-        })
-        .then(response => response.json())
-        .then(result => {
-            setContacts([
-                result.map(contact => {
-                    return <Contacts key={contact._id} contact={contact}>  </Contacts>
-                })
-            ]);
-        })
+        if(localStorage.getItem("user" !== null)){
+            fetch(`${process.env.REACT_APP_API_URL}/users/getAllUsers/${JSON.parse(localStorage.getItem("user"))._id}`, {
+                headers:{
+                    "Content-type": "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(result => {
+                setContacts([
+                    result.map(contact => {
+                        return <Contacts key={contact._id} contact={contact}>  </Contacts>
+                    })
+                ]);
+            })
+        }
     }, []);
 
     return(
